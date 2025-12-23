@@ -1,10 +1,5 @@
 # Sol-Estate Platform
 
-**Live Demo:** [Link to live demo if available](#)
-
-> [!IMPORTANT]
-> **Demo Availability Notice:** This project is currently deployed on the Solana **Devnet**. All transactions use a custom SPL Token (Fake USDC) and do not involve real funds.
-
 **Sol-Estate** is a decentralized Real World Asset (RWA) platform built on Solana using the Anchor Framework and Next.js. It allows users to invest in fractionalized real estate properties using USDC. The platform features an Admin Portal for listing properties, a Marketplace for viewing assets, and a User Dashboard for tracking portfolio performance.
 
 ---
