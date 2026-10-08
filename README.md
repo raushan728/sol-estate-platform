@@ -38,7 +38,7 @@ anchor test
 
 Open an issue on the [GitHub repository] or reach out directly:
 
-[Email](mailto:raushansinghrajpoot687@gmail.com) | [Twitter](https://x.com/Raushan_090) | [LinkedIn](https://www.linkedin.com/in/raushan-singh-807916390/) | [Telegram](https://t.me/raushan_singh_29)
+[`Email`](mailto:raushansinghrajpoot687@gmail.com) | [`Twitter`](https://x.com/Raushan_090) | [`LinkedIn`](https://www.linkedin.com/in/raushan-singh-807916390/) | [`Telegram`](https://t.me/raushan_singh_29)
 
 [GitHub repository]: https://github.com/raushan728/sol-estate-platform/issues
 
