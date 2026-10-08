@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sol-Estate Platform - Frontend Client
+
+This is the [Next.js] frontend application for Sol-Estate, a decentralized Real World Asset (RWA) investment platform built on Solana.
+
+[Next.js]: https://nextjs.org/
+
+## Prerequisites
+
+- [Node.js] v20+
+- npm or yarn
+
+[Node.js]: https://nodejs.org/
 
 ## Getting Started
 
-First, run the development server:
+1. Install the dependencies:
+   ```bash
+   yarn install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   yarn dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to explore the platform.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Visual Walkthrough
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Phase 1: Admin Listing
+The Admin Panel allows property owners to create new listings.
+![Admin Listing](../demo/localhost_3000_admin.png)
 
-## Learn More
+### Phase 2: Successful Listing
+Confirmation screen after successfully listing a real world asset.
+![Listed successfully](../demo/Listed%20successfully.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 3: Marketplace View
+Users browse available properties on the main marketplace feed.
+![Marketplace View](../demo/localhost_3000_.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Phase 4: Investment Terminal
+Clicking on a property reveals detailed information and the investment interface.
+![Investment Details](../demo/localhost_3000_property_FLTkxfd33Tw9AhrvVXeSDJuUVky759qrAQw7h1btVQEL.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Phase 5: Transaction & Payment
+Users confirm the transaction through their wallet provider.
+![Transaction](../demo/Investment.png)
 
-## Deploy on Vercel
+### Phase 6: Portfolio Dashboard
+After investing, users can track their holdings.
+![Dashboard](../demo/localhost_3000_dashboard.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you redeploy the Solana program to your own cluster, ensure you update the `PROGRAM_ID` in `src/app/utils/constants.ts` to match your new program ID, and provide the correct USDC Mint address when creating properties.

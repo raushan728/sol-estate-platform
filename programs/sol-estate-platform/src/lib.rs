@@ -36,6 +36,8 @@ pub mod sol_estate_platform {
         let property = &mut ctx.accounts.property;
         let investment = &mut ctx.accounts.user_investment;
 
+        // Integer division is used here for simplicity in this learning project.
+        // In production, precision loss (remainders) requires fixed-point math or exact proportional shares.
         let price_per_share = property.price.checked_div(property.total_shares).unwrap();
         let total_cost = price_per_share.checked_mul(shares_amount).unwrap();
 
@@ -71,6 +73,8 @@ pub struct ListProperty<'info> {
     #[account(
         init,
         payer = owner,
+        // Allocating a flat 500 bytes to safely accommodate dynamic strings (name, location, image_url)
+        // without complex byte-length calculations during initialization.
         space = 8 + 500,
         seeds = [b"property", name.as_bytes()],
         bump
@@ -81,6 +85,8 @@ pub struct ListProperty<'info> {
         init,
         payer = owner,
         token::mint = usdc_mint,
+        // The property PDA acts as the authority so the program can programmatically sign
+        // future outbound transfers (e.g., rent distributions) from this vault.
         token::authority = property,
         seeds = [b"vault", property.key().as_ref()],
         bump
